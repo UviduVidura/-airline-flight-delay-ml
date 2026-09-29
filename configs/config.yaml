@@ -1,0 +1,18 @@
+project:
+  name: airline-flight-delay-ml
+  version: "0.1.0"
+  environment: development
+
+data:
+  raw_path: data/raw
+  interim_path: data/interim
+  processed_path: data/processed
+
+models:
+  path: models
+
+reports:
+  path: reports
+
+logging:
+  level: INFO

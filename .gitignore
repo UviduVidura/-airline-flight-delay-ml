@@ -1,0 +1,32 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+.env
+
+.ipynb_checkpoints/
+
+.vscode/
+
+data/raw/*
+data/interim/*
+data/processed/*
+
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+models/*.joblib
+models/*.pkl
+models/*.bin
+
+mlruns/
+
+*.log
+
+.DS_Store
+Thumbs.db
+
+# Keep source code, notebooks, configs, tests, and docs tracked
+# Do not ignore project source files or repository documentation
