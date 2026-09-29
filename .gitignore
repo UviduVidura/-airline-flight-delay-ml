@@ -23,6 +23,19 @@ models/*.bin
 
 mlruns/
 
+# Local database used for quick development/testing
+flight_delay.db
+
+# Pytest cache
+.pytest_cache/
+
+# Ignore editor/project local files
+.env.local
+.env.*.local
+
+# Ignore IDE-specific project files
+.idea/
+
 *.log
 
 .DS_Store

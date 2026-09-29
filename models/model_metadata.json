@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-09-29T19:29:39.640429+00:00",
+  "feature_columns": [
+    "year",
+    "month",
+    "day_of_month",
+    "day_of_week",
+    "op_unique_carrier",
+    "origin",
+    "dest",
+    "crs_dep_time",
+    "crs_arr_time",
+    "crs_elapsed_time",
+    "distance",
+    "dep_hour",
+    "arr_hour",
+    "departure_period",
+    "season",
+    "is_weekend",
+    "route"
+  ],
+  "classification_target": "dep_del15",
+  "regression_target": "dep_delay",
+  "classification_threshold": 0.5,
+  "classification_model": "RandomForestClassifier",
+  "regression_model": "XGBoostRegressor",
+  "classification_path": "models/classification_model.joblib",
+  "regression_path": "models/regression_model.joblib",
+  "classification_metrics": {
+    "accuracy": 0.7537804179042259,
+    "precision": 0.2725882892524079,
+    "recall": 0.20174247567322923,
+    "f1": 0.23187463424149815,
+    "confusion_matrix": [
+      [
+        68763,
+        9516
+      ],
+      [
+        14110,
+        3566
+      ]
+    ],
+    "threshold": 0.5,
+    "roc_auc": 0.6001092144336392,
+    "pr_auc": 0.23982579325006842,
+    "log_loss": 0.5399132101500405
+  },
+  "regression_metrics": {
+    "mae": 22.213320768038614,
+    "rmse": 53.60187943164879,
+    "r2": 0.005903211890252891
+  },
+  "leakage_columns_excluded": [
+    "actual_elapsed_time",
+    "arr_delay",
+    "arr_time",
+    "cancellation_code",
+    "cancelled",
+    "carrier_delay",
+    "dep_del15",
+    "dep_delay",
+    "dep_time",
+    "diverted",
+    "late_aircraft_delay",
+    "nas_delay",
+    "security_delay",
+    "taxi_in",
+    "taxi_out",
+    "weather_delay",
+    "wheels_off",
+    "wheels_on"
+  ]
+}

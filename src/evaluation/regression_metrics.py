@@ -1,5 +1,15 @@
 """Regression metrics for delay duration modeling."""
 
-def mean_absolute_error(y_true, y_pred):
-    """Return MAE for regression tasks."""
-    raise NotImplementedError("Metric implementation is not available yet.")
+from __future__ import annotations
+
+import numpy as np
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+
+def compute_regression_metrics(y_true, y_pred) -> dict:
+    """Compute MAE, RMSE, and R2 for delay-duration prediction."""
+    return {
+        "mae": float(mean_absolute_error(y_true, y_pred)),
+        "rmse": float(np.sqrt(mean_squared_error(y_true, y_pred))),
+        "r2": float(r2_score(y_true, y_pred)),
+    }
